@@ -22,6 +22,15 @@ import SplashScreen from "./components/SplashScreen";
 import { useTranslation } from "react-i18next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "./components/Loader";
+
+const Studio = () => {
+  useEffect(() => {
+    window.location.href =
+      "https://www.sanity.io/@oGOxUdGf1/studio/ybk7og06bkbc9mh7fq1o6lg5/default/structure";
+  }, []);
+  return <Loader />;
+};
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +70,7 @@ function App() {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/studio" element={<Studio />} />
         </Routes>
         <ContactButton />
         <CookieBanner />

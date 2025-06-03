@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Next Art Heavy';
+  src: url('/fonts/NextArtHeavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Font fallback */
+.font-next-art {
+  font-family: 'Next Art Heavy', 'Arial Black', sans-serif;
+}

@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Réalisations",
+    "quote": "Devis",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "home": {
+      "title": "Donnez vie à votre vision",
+      "subtitle": "Nous sommes spécialisés dans la création de teasers, bandes-annonces, vidéos promotionnelles et contenus visuels qui racontent votre histoire."
+    }
+  },
+  "featuredWork": {
+    "title": "Projets à la Une",
+    "subtitle": "Découvrez nos derniers projets qui démontrent notre expertise dans la création de récits visuels captivants.",
+    "viewAll": "Voir Tous les Projets",
+    "projects": {
+      "trailer": {
+        "title": "Bande-annonce de Film Cinématographique",
+        "category": "Bande-annonce"
+      },
+      "teaser": {
+        "title": "Teaser de Lancement de Produit",
+        "category": "Teaser"
+      },
+      "aftermovie": {
+        "title": "Aftermovie Collection Été",
+        "category": "Aftermovie"
+      },
+      "corporate": {
+        "title": "Histoire de Marque Corporate",
+        "category": "Promotionnel"
+      }
+    }
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "Nous combinons narration créative et expertise technique pour offrir un contenu vidéo exceptionnel.",
+    "features": {
+      "creative": {
+        "title": "Excellence Créative",
+        "description": "Notre expertise primée nous permet de créer du contenu visuellement époustouflant et émotionnellement captivant."
+      },
+      "expertise": {
+        "title": "Expertise Sectorielle",
+        "description": "Avec plus d'une décennie d'expérience, nous comprenons les nuances des différents secteurs et audiences."
+      },
+      "delivery": {
+        "title": "Livraison Ponctuelle",
+        "description": "Nous sommes fiers de respecter les délais sans compromettre la qualité ou l'attention aux détails."
+      }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Nous proposons une gamme complète de services de production vidéo pour répondre à vos besoins créatifs et marketing.",
+    "learnMore": "En savoir plus",
+    "customSolution": {
+      "title": "Besoin d'une solution sur mesure ?",
+      "description": "Nous pouvons adapter nos services à vos besoins spécifiques et créer une expérience vidéo unique pour votre audience.",
+      "cta": "Contactez-nous"
+    }
+  },
+  "readyToStart": {
+    "title": "Prêt à donner vie à votre vision ?",
+    "subtitle": "Du concept à la livraison finale, nous travaillons en étroite collaboration avec vous pour créer des vidéos qui captent votre audience et atteignent vos objectifs.",
+    "stats": {
+      "teasers": "50+ Teasers & Bandes-annonces",
+      "videos": "20+ Vidéos Promotionnelles",
+      "clients": "30+ Clients Satisfaits"
+    },
+    "cta": {
+      "portfolio": "Découvrir nos réalisations",
+      "contact": "Démarrer votre projet"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "subtitle": "Ne vous fiez pas qu'à notre parole. Voici ce que nos clients disent de leur collaboration avec nous.",
+    "navigation": {
+      "previous": "Témoignage précédent",
+      "next": "Témoignage suivant",
+      "goto": "Aller au témoignage"
+    },
+    "items": [
+      {
+        "quote": "Leur expertise en production vidéo a transformé notre message d'entreprise en une histoire visuelle captivante. Les résultats ont dépassé nos attentes.",
+        "name": "Sarah Johnson",
+        "position": "Directrice Marketing",
+        "company": "TechVision Inc."
+      },
+      {
+        "quote": "La créativité de l'équipe et son attention aux détails en motion design ont donné vie à notre marque d'une manière que nous n'aurions jamais imaginée possible.",
+        "name": "Michael Chen",
+        "position": "Directeur Créatif",
+        "company": "Innovation Studios"
+      },
+      {
+        "quote": "Professionnels, innovants et incroyablement talentueux. Ils ont livré une vidéo impressionnante qui capture parfaitement la vision de notre entreprise.",
+        "name": "Emily Roberts",
+        "position": "PDG",
+        "company": "Future Dynamics"
+      }
+    ]
+  },
+  "blog": {
+    "articles": {
+      "ai-editing": {
+        "title": "L'Intelligence Artificielle dans le Montage Vidéo 2025",
+        "excerpt": "Découvrez comment l'IA révolutionne les techniques de montage vidéo en 2025. De l'automatisation intelligente aux outils de post-production nouvelle génération.",
+        "category": "Montage Vidéo"
+      },
+      "teaser-production": {
+        "title": "Production de Teaser : Technologies Émergentes",
+        "excerpt": "Explorez les nouvelles technologies qui redéfinissent la création de teasers en 2025 : narration interactive et storytelling innovant.",
+        "category": "Production Vidéo"
+      },
+      "motion-design": {
+        "title": "Motion Design : Tendances et Innovations 2025",
+        "excerpt": "Les dernières innovations en motion design : animations génératives et design interactif pour vos projets vidéo.",
+        "category": "Motion Design"
+      },
+      "storytelling": {
+        "title": "L'Art du Storytelling Vidéo en 2025",
+        "excerpt": "Découvrez les techniques modernes de narration visuelle et comment créer des histoires captivantes qui résonnent avec votre audience.",
+        "category": "Production Vidéo"
+      },
+      "post-production": {
+        "title": "Post-Production 2025 : Au-delà du Traditionnel",
+        "excerpt": "Les outils et techniques de post-production de nouvelle génération qui transforment l'industrie audiovisuelle en 2025.",
+        "category": "Post-Production"
+      },
+      "corporate-video": {
+        "title": "Vidéo Corporate du Futur : Tendances 2025",
+        "excerpt": "Comment les entreprises utilisent les dernières innovations vidéo pour créer des contenus corporate plus engageants et immersifs.",
+        "category": "Vidéo Corporate"
+      }
+    }
+  }
+}

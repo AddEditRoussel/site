@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "quote": "Quote",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "home": {
+      "title": "Bring Your Vision to Life",
+      "subtitle": "We specialize in creating teasers, trailers, promotional videos, and compelling visual content that tells your story."
+    }
+  },
+  "featuredWork": {
+    "title": "Featured Projects",
+    "subtitle": "Discover our latest projects that demonstrate our expertise in creating captivating visual narratives.",
+    "viewAll": "View All Projects",
+    "projects": {
+      "trailer": {
+        "title": "Cinematic Film Trailer",
+        "category": "Trailer"
+      },
+      "teaser": {
+        "title": "Product Launch Teaser",
+        "category": "Teaser"
+      },
+      "aftermovie": {
+        "title": "Summer Collection Aftermovie",
+        "category": "Aftermovie"
+      },
+      "corporate": {
+        "title": "Corporate Brand Story",
+        "category": "Promotional"
+      }
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "We combine creative storytelling and technical expertise to deliver exceptional video content.",
+    "features": {
+      "creative": {
+        "title": "Creative Excellence",
+        "description": "Our award-winning expertise allows us to create visually stunning and emotionally engaging content."
+      },
+      "expertise": {
+        "title": "Industry Expertise",
+        "description": "With over a decade of experience, we understand the nuances of different sectors and audiences."
+      },
+      "delivery": {
+        "title": "Timely Delivery",
+        "description": "We take pride in meeting deadlines without compromising quality or attention to detail."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a comprehensive range of video production services to meet your creative and marketing needs.",
+    "learnMore": "Learn More",
+    "customSolution": {
+      "title": "Need a custom solution?",
+      "description": "We can tailor our services to your specific needs and create a unique video experience for your audience.",
+      "cta": "Contact Us"
+    }
+  },
+  "readyToStart": {
+    "title": "Ready to Bring Your Vision to Life?",
+    "subtitle": "From concept to final delivery, we work closely with you to create videos that capture your audience and achieve your goals.",
+    "stats": {
+      "teasers": "50+ Teasers & Trailers",
+      "videos": "20+ Promotional Videos",
+      "clients": "30+ Satisfied Clients"
+    },
+    "cta": {
+      "portfolio": "Discover our work",
+      "contact": "Start your project"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "Don't just take our word for it. Here's what our clients say about working with us.",
+    "navigation": {
+      "previous": "Previous testimonial",
+      "next": "Next testimonial",
+      "goto": "Go to testimonial"
+    },
+    "items": [
+      {
+        "quote": "Their video production expertise transformed our corporate message into a compelling visual story. The results exceeded our expectations.",
+        "name": "Sarah Johnson",
+        "position": "Marketing Director",
+        "company": "TechVision Inc."
+      },
+      {
+        "quote": "The team's creativity and attention to detail in motion design brought our brand to life in ways we never imagined possible.",
+        "name": "Michael Chen",
+        "position": "Creative Lead",
+        "company": "Innovation Studios"
+      },
+      {
+        "quote": "Professional, innovative, and incredibly talented. They delivered a stunning video that perfectly captured our company's vision.",
+        "name": "Emily Roberts",
+        "position": "CEO",
+        "company": "Future Dynamics"
+      }
+    ]
+  },
+  "blog": {
+    "articles": {
+      "ai-editing": {
+        "title": "AI in Video Editing 2025",
+        "excerpt": "Discover how AI is revolutionizing video editing techniques in 2025. From intelligent automation to next-generation post-production tools.",
+        "category": "Video Editing"
+      },
+      "teaser-production": {
+        "title": "Teaser Production: Emerging Technologies",
+        "excerpt": "Explore the new technologies redefining teaser creation in 2025: interactive storytelling and innovative narrative techniques.",
+        "category": "Video Production"
+      },
+      "motion-design": {
+        "title": "Motion Design: Trends and Innovations 2025",
+        "excerpt": "The latest innovations in motion design: generative animations and interactive design for your video projects.",
+        "category": "Motion Design"
+      },
+      "storytelling": {
+        "title": "The Art of Video Storytelling in 2025",
+        "excerpt": "Discover modern visual storytelling techniques and how to create compelling stories that resonate with your audience.",
+        "category": "Video Production"
+      },
+      "post-production": {
+        "title": "Post-Production 2025: Beyond Traditional",
+        "excerpt": "Next-generation post-production tools and techniques transforming the audiovisual industry in 2025.",
+        "category": "Post-Production"
+      },
+      "corporate-video": {
+        "title": "Corporate Video of the Future: 2025 Trends",
+        "excerpt": "How companies are using the latest video innovations to create more engaging and immersive corporate content.",
+        "category": "Corporate Video"
+      }
+    }
+  }
+}

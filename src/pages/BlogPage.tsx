@@ -203,7 +203,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white py-12">
+      <section className="bg-white py-12 hidden">
         <div className="container">
           <div className="bg-primary/5 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-next-art mb-4">

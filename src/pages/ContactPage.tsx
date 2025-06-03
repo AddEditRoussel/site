@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
             ? "Have a project in mind? We'd love to discuss it. Contact us and let's create something extraordinary together."
             : "Vous avez un projet en tête ? Nous serions ravis d'en discuter. Contactez-nous et créons ensemble quelque chose d'extraordinaire."
         }
-        backgroundImage="https://images.pexels.com/photos/3810787/pexels-photo-3810787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        backgroundImage={import.meta.env.VITE_CONTACT_HERO_URL}
         alignment="left"
         variant="banner"
       />
@@ -155,7 +155,7 @@ const ContactPage: React.FC = () => {
                   </h4>
                   <div className="flex space-x-4">
                     <a
-                      href="https://instagram.com"
+                      href={import.meta.env.VITE_INSTA}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-600 hover:bg-primary hover:text-white transition-colors"

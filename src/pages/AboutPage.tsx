@@ -6,10 +6,12 @@ import { Video, CheckCircle, Trophy, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useFetch } from "../hooks/useFetch";
 import Loader from "../components/Loader";
+import { useIsLargeScreen } from "../hooks/useIsLargeScreen";
 
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === "en";
+  const isLargeScreen = useIsLargeScreen();
 
   // Fetch about us page data
   const {
@@ -89,6 +91,31 @@ const AboutPage: React.FC = () => {
               <p className="text-neutral-700 mb-6">
                 {isEnglish ? aboutSectionParag3EN : aboutSectionParag3FR}
               </p>
+              {!isLargeScreen && (
+                <motion.div
+                  className="relative max-w-md mx-auto lg:mx-0 mb-[50px]"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                >
+                  <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden shadow-xl">
+                    <img
+                      src={aboutSectionImgUrl}
+                      alt="Alexandre Roussel"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-6 -left-6 bg-secondary p-4 rounded-lg shadow-lg">
+                    <p className="font-next-art text-dark text-xl">
+                      {yearOfExperience}+ {isEnglish ? "Years" : "Ans"}
+                    </p>
+                    <p className="text-dark/80">
+                      {isEnglish ? "of TV Expertise" : "d'Expertise TV"}
+                    </p>
+                  </div>
+                </motion.div>
+              )}
               <div className="space-y-3">
                 <div className="flex items-start">
                   <CheckCircle
@@ -126,29 +153,31 @@ const AboutPage: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              className="relative max-w-md mx-auto lg:mx-0"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden shadow-xl">
-                <img
-                  src={aboutSectionImgUrl}
-                  alt="Alexandre Roussel"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-secondary p-4 rounded-lg shadow-lg">
-                <p className="font-next-art text-dark text-xl">
-                  {yearOfExperience}+ {isEnglish ? "Years" : "Ans"}
-                </p>
-                <p className="text-dark/80">
-                  {isEnglish ? "of TV Expertise" : "d'Expertise TV"}
-                </p>
-              </div>
-            </motion.div>
+            {isLargeScreen && (
+              <motion.div
+                className="relative max-w-md mx-auto lg:mx-0"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <div className="aspect-w-3 aspect-h-4 rounded-lg overflow-hidden shadow-xl">
+                  <img
+                    src={aboutSectionImgUrl}
+                    alt="Alexandre Roussel"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-secondary p-4 rounded-lg shadow-lg">
+                  <p className="font-next-art text-dark text-xl">
+                    {yearOfExperience}+ {isEnglish ? "Years" : "Ans"}
+                  </p>
+                  <p className="text-dark/80">
+                    {isEnglish ? "of TV Expertise" : "d'Expertise TV"}
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>

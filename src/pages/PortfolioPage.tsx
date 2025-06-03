@@ -134,6 +134,7 @@ const PortfolioPage: React.FC = () => {
                 className="w-full h-full"
                 allow="autoplay; fullscreen"
                 allowFullScreen
+                referrerPolicy="no-referrer"
               ></iframe>
             </div>
           </motion.div>

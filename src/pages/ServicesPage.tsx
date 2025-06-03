@@ -16,10 +16,12 @@ import { useTranslation } from "react-i18next";
 import { useFetch } from "../hooks/useFetch";
 import Loader from "../components/Loader";
 import { useResendContactForm } from "../hooks/resend/useResendContactForm";
+import { useIsLargeScreen } from "../hooks/useIsLargeScreen";
 
 const ServicesPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === "en";
+  const isLgScreen = useIsLargeScreen(767);
 
   // Fetch our service page data
   const {
@@ -140,7 +142,9 @@ const ServicesPage: React.FC = () => {
               }`}
             >
               <motion.div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center`}
+                className={`grid grid-cols-1 md:grid-cols-2 ${
+                  isLgScreen ? "gap-12" : "gap-2"
+                } items-center`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -167,7 +171,7 @@ const ServicesPage: React.FC = () => {
                       )
                     )}
                   </ul>
-                  {true && (
+                  {isLgScreen && (
                     <Link to="/contact" className="btn btn-primary">
                       {isEnglish
                         ? `Learn More About ${service.titleEN}`
@@ -192,11 +196,13 @@ const ServicesPage: React.FC = () => {
                     />
                   </div>
                   <br />
-                  {/*  <Link to="/contact" className="btn btn-primary">
-                    {isEnglish
-                      ? `Learn More About ${service.titleEN}`
-                      : `Se Renseigner sur ${service.titleFR}`}
-                  </Link> */}
+                  {!isLgScreen && (
+                    <Link to="/contact" className="btn btn-primary">
+                      {isEnglish
+                        ? `Learn More About ${service.titleEN}`
+                        : `Se Renseigner sur ${service.titleFR}`}
+                    </Link>
+                  )}
                 </motion.div>
               </motion.div>
             </div>

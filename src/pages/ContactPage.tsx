@@ -4,10 +4,28 @@ import ContactForm from "../components/ContactForm";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock, Instagram, Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Loader from "../components/Loader";
+import { useFetch } from "../hooks/useFetch";
+import { useIsLargeScreen } from "../hooks/useIsLargeScreen";
 
 const ContactPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === "en";
+  const isLgScreen = useIsLargeScreen(1024);
+  const { data, isLoading, error } = useFetch(`
+    *[_type == "contactPage"][0] {
+      instagramUrl,
+      heroImgUrl
+    }
+  `);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (error) {
+    return <div>Error loading data</div>;
+  }
 
   return (
     <>
@@ -18,7 +36,7 @@ const ContactPage: React.FC = () => {
             ? "Have a project in mind? We'd love to discuss it. Contact us and let's create something extraordinary together."
             : "Vous avez un projet en tête ? Nous serions ravis d'en discuter. Contactez-nous et créons ensemble quelque chose d'extraordinaire."
         }
-        backgroundImage={import.meta.env.VITE_CONTACT_HERO_URL}
+        backgroundImage={data?.heroImgUrl}
         alignment="left"
         variant="banner"
       />
@@ -54,7 +72,16 @@ const ContactPage: React.FC = () => {
               >
                 <ContactForm />
               </motion.div>
-
+              {!isLgScreen && (
+                <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl mb-6">
+                  <img
+                    referrerPolicy="no-referrer"
+                    src="https://lh3.googleusercontent.com/pw/AP1GczO3o7o9U68vi1IcZV33us6AwZdcX29SagUuSqUlq5QFrmc8orcJQXUwDMdmZUM2kazZYpp81F5joYX6hnE6U9MicI6bP13KZiSUh9yWNe95-qfH1MENeTejl4nPNSEzjTZJIqbH4ovX5a3PzwaEjZKb=w2492-h1662-s-no-gm?authuser=0"
+                    alt={isEnglish ? "Editing studio" : "Studio de montage"}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -140,14 +167,16 @@ const ContactPage: React.FC = () => {
               transition={{ duration: 0.7 }}
             >
               <div className="sticky top-24">
-                <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl mb-6">
-                  <img
-                    referrerPolicy="no-referrer"
-                    src="https://lh3.googleusercontent.com/pw/AP1GczO3o7o9U68vi1IcZV33us6AwZdcX29SagUuSqUlq5QFrmc8orcJQXUwDMdmZUM2kazZYpp81F5joYX6hnE6U9MicI6bP13KZiSUh9yWNe95-qfH1MENeTejl4nPNSEzjTZJIqbH4ovX5a3PzwaEjZKb=w2492-h1662-s-no-gm?authuser=0"
-                    alt={isEnglish ? "Editing studio" : "Studio de montage"}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                {isLgScreen && (
+                  <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl mb-6">
+                    <img
+                      referrerPolicy="no-referrer"
+                      src="https://lh3.googleusercontent.com/pw/AP1GczO3o7o9U68vi1IcZV33us6AwZdcX29SagUuSqUlq5QFrmc8orcJQXUwDMdmZUM2kazZYpp81F5joYX6hnE6U9MicI6bP13KZiSUh9yWNe95-qfH1MENeTejl4nPNSEzjTZJIqbH4ovX5a3PzwaEjZKb=w2492-h1662-s-no-gm?authuser=0"
+                      alt={isEnglish ? "Editing studio" : "Studio de montage"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
 
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="text-lg font-next-art mb-4">
@@ -155,7 +184,7 @@ const ContactPage: React.FC = () => {
                   </h4>
                   <div className="flex space-x-4">
                     <a
-                      href={import.meta.env.VITE_INSTA}
+                      href={data?.instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-600 hover:bg-primary hover:text-white transition-colors"

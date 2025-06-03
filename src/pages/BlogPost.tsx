@@ -87,6 +87,7 @@ const BlogPost: React.FC = () => {
         <div className="my-[2rem]">
           {value?.asset?._ref && (
             <img
+              referrerPolicy="no-referrer"
               src={imgUrlBuilder(value).width(800).height(500).url()}
               alt="Blog Image"
               className="max-w-full w-full md:w-2/3 h-auto rounded-lg shadow-md my-4"
@@ -135,6 +136,7 @@ const BlogPost: React.FC = () => {
 
           <div className="rounded-xl overflow-hidden mb-8 shadow-lg">
             <img
+              referrerPolicy="no-referrer"
               src={currentArticle.imageUrl}
               alt={isEnglish ? currentArticle.titleEN : currentArticle.titleFR}
               className="w-full h-auto"
@@ -219,6 +221,7 @@ const BlogPost: React.FC = () => {
                   >
                     <div className="aspect-video overflow-hidden">
                       <img
+                        referrerPolicy="no-referrer"
                         src={relatedArticle.imageUrl}
                         alt={
                           isEnglish

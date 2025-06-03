@@ -167,15 +167,17 @@ const ServicesPage: React.FC = () => {
                       )
                     )}
                   </ul>
-                  <Link to="/contact" className="btn btn-primary">
-                    {isEnglish
-                      ? `Learn More About ${service.titleEN}`
-                      : `Se Renseigner sur ${service.titleFR}`}
-                  </Link>
+                  {true && (
+                    <Link to="/contact" className="btn btn-primary">
+                      {isEnglish
+                        ? `Learn More About ${service.titleEN}`
+                        : `Se Renseigner sur ${service.titleFR}`}
+                    </Link>
+                  )}
                 </div>
 
                 <motion.div
-                  className="rounded-xl overflow-hidden shadow-lg"
+                  className="rounded-xl overflow-hidden "
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -183,11 +185,18 @@ const ServicesPage: React.FC = () => {
                 >
                   <div className="aspect-w-16 aspect-h-9">
                     <img
+                      referrerPolicy="no-referrer"
                       src={service.image}
                       alt={isEnglish ? service.titleEN : service.titleFR}
                       className="w-full h-full object-cover"
                     />
                   </div>
+                  <br />
+                  {/*  <Link to="/contact" className="btn btn-primary">
+                    {isEnglish
+                      ? `Learn More About ${service.titleEN}`
+                      : `Se Renseigner sur ${service.titleFR}`}
+                  </Link> */}
                 </motion.div>
               </motion.div>
             </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface BlogCardProps {
   title: string;
@@ -15,17 +15,21 @@ const BlogCard: React.FC<BlogCardProps> = ({
   excerpt,
   slug,
   imageUrl,
-  category
+  category,
 }) => {
   return (
-    <motion.article 
+    <motion.article
       className="card overflow-hidden group h-full flex flex-col"
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      <Link to={`/blog/${slug}`} className="block relative overflow-hidden aspect-video">
-        <img 
-          src={imageUrl} 
+      <Link
+        to={`/blog/${slug}`}
+        className="block relative overflow-hidden aspect-video"
+      >
+        <img
+          referrerPolicy="no-referrer"
+          src={imageUrl}
           alt={title}
           width="800"
           height="450"
@@ -40,15 +44,27 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <h2 className="font-next-art text-xl mb-3 group-hover:text-primary transition-colors">
           <Link to={`/blog/${slug}`}>{title}</Link>
         </h2>
-        <p className="text-neutral-600 mb-4 line-clamp-3 flex-grow">{excerpt}</p>
-        <Link 
-          to={`/blog/${slug}`} 
+        <p className="text-neutral-600 mb-4 line-clamp-3 flex-grow">
+          {excerpt}
+        </p>
+        <Link
+          to={`/blog/${slug}`}
           className="inline-flex items-center font-semibold text-primary hover:text-primary-dark transition-colors mt-auto"
           aria-label={`Lire l'article : ${title}`}
         >
           Lire l'article
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="ml-1"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </Link>
       </div>

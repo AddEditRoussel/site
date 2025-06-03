@@ -184,6 +184,7 @@ const PortfolioPage: React.FC = () => {
               >
                 <div className="relative overflow-hidden rounded-lg shadow-md">
                   <img
+                    referrerPolicy="no-referrer"
                     src={project.thumbnail}
                     alt={isEnglish ? project.titleEN : project.titleFR}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
@@ -245,6 +246,7 @@ const PortfolioPage: React.FC = () => {
                 ></iframe>
               ) : (
                 <img
+                  referrerPolicy="no-referrer"
                   src={selectedProject.thumbnail}
                   alt={
                     isEnglish

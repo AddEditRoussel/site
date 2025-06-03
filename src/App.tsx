@@ -26,8 +26,7 @@ import Loader from "./components/Loader";
 
 const Studio = () => {
   useEffect(() => {
-    window.location.href =
-      "https://www.sanity.io/@oGOxUdGf1/studio/ybk7og06bkbc9mh7fq1o6lg5/default/structure";
+    window.location.href = "https://addedit.sanity.studio/structure";
   }, []);
   return <Loader />;
 };

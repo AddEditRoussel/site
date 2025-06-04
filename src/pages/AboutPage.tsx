@@ -11,7 +11,7 @@ import { useIsLargeScreen } from "../hooks/useIsLargeScreen";
 const AboutPage: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === "en";
-  const isLargeScreen = useIsLargeScreen();
+  const isLargeScreen = useIsLargeScreen(1024);
 
   // Fetch about us page data
   const {

@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
         backgroundImage={homePageData.heroImgUrl}
       />
 
-      <FeaturedWork />
+      {false && <FeaturedWork />}
 
       <section className="section bg-white">
         <div className="container">

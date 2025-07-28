@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           <img
             src="https://lh3.googleusercontent.com/pw/AP1GczO0v25v5O2BUGtjMD2OhjsetcJp5wVldnW0ryH04CpG0KzmXAgXx-8rfIptUaWVyRk5cS_2NfLITcHK1pPEFaLaxPBF87AzwHjFxWOE8yC37jj2K-L0kuXVtg775nOg0KKqvlpwKkMavExnTfc6drRz=w1800-h441-s-no-gm"
             alt="ADD EDIT"
-            className="h-8 w-auto"
+            className="h-12 w-auto"
             referrerPolicy="no-referrer"
           />
         </Link>
